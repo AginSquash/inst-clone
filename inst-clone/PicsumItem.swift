@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import Alamofire
 
-struct picsum_item: Codable, Hashable, Identifiable {
+struct PicsumItem: Codable, Hashable, Identifiable {
     let id: String
     let author: String
     let width: Int
@@ -24,13 +24,7 @@ struct picsum_item: Codable, Hashable, Identifiable {
         case download_url
     }
     
-    static func getExample() -> picsum_item {
-        return picsum_item(id: "0", author: "Alejandro Escamilla", width: 5616, height:3744, download_url: URL(string: "https://picsum.photos/id/0/5616/3744")!)
+    static func getExample() -> PicsumItem {
+        return PicsumItem(id: "0", author: "Alejandro Escamilla", width: 5616, height:3744, download_url: URL(string: "https://picsum.photos/id/0/5616/3744")!)
     }
-}
-
-struct picsum_photo: Identifiable {
-    let id: String
-    let author: String
-    var image: Image?
 }

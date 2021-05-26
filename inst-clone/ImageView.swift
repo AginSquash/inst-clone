@@ -9,7 +9,7 @@ import SwiftUI
 import Alamofire
 
 struct ImageView: View {
-    @State var item: picsum_item
+    @State var item: PicsumItem
     
     @State var image: Image? = nil
     
@@ -90,6 +90,6 @@ struct ImageView: View {
 
 struct ImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageView(item: picsum_item.getExample())
+        ImageView(item: PicsumItem.getExample())
     }
 }

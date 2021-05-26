@@ -13,7 +13,7 @@
 		CD0F7198265E6BD8003E2683 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0F7197265E6BD8003E2683 /* Preview Assets.xcassets */; };
 		CD0F71A1265E6E95003E2683 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CD0F71A0265E6E95003E2683 /* Alamofire */; };
 		CD0F71A3265E6F03003E2683 /* InstCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F71A2265E6F03003E2683 /* InstCore.swift */; };
-		CD0F71A5265E7573003E2683 /* picsum_item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F71A4265E7573003E2683 /* picsum_item.swift */; };
+		CD0F71A5265E7573003E2683 /* PicsumItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F71A4265E7573003E2683 /* PicsumItem.swift */; };
 		CD0F71A7265E9305003E2683 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F71A6265E9305003E2683 /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,7 +25,7 @@
 		CD0F7197265E6BD8003E2683 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD0F7199265E6BD8003E2683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD0F71A2265E6F03003E2683 /* InstCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstCore.swift; sourceTree = "<group>"; };
-		CD0F71A4265E7573003E2683 /* picsum_item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = picsum_item.swift; sourceTree = "<group>"; };
+		CD0F71A4265E7573003E2683 /* PicsumItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumItem.swift; sourceTree = "<group>"; };
 		CD0F71A6265E9305003E2683 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +64,7 @@
 				CD0F7192265E6BD8003E2683 /* ContentView.swift */,
 				CD0F71A6265E9305003E2683 /* ImageView.swift */,
 				CD0F71A2265E6F03003E2683 /* InstCore.swift */,
-				CD0F71A4265E7573003E2683 /* picsum_item.swift */,
+				CD0F71A4265E7573003E2683 /* PicsumItem.swift */,
 				CD0F7194265E6BD8003E2683 /* Assets.xcassets */,
 				CD0F7199265E6BD8003E2683 /* Info.plist */,
 				CD0F7196265E6BD8003E2683 /* Preview Content */,
@@ -159,7 +159,7 @@
 				CD0F7193265E6BD8003E2683 /* ContentView.swift in Sources */,
 				CD0F71A3265E6F03003E2683 /* InstCore.swift in Sources */,
 				CD0F7191265E6BD7003E2683 /* inst_cloneApp.swift in Sources */,
-				CD0F71A5265E7573003E2683 /* picsum_item.swift in Sources */,
+				CD0F71A5265E7573003E2683 /* PicsumItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
