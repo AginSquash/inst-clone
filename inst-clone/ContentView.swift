@@ -6,11 +6,30 @@
 //
 
 import SwiftUI
+import Alamofire
 
 struct ContentView: View {
+    @ObservedObject var instcore = InstCore()
+    
+    @State var image: Image?
+    
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ScrollView(.vertical, showsIndicators: false) {
+            ForEach(instcore.items, id: \.self) { item in
+                ImageView(item: item)
+            }
+        }
+        .padding()
+        .onAppear(perform: instcore.load)
+    }
+    
+
+    func updateImage(from data: Data) {
+        guard let uiimage = UIImage(data: data) else {
+            return
+        }
+        self.image = Image(uiImage: uiimage)
     }
 }
 

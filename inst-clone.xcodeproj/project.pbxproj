@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,10 @@
 		CD0F7193265E6BD8003E2683 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F7192265E6BD8003E2683 /* ContentView.swift */; };
 		CD0F7195265E6BD8003E2683 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0F7194265E6BD8003E2683 /* Assets.xcassets */; };
 		CD0F7198265E6BD8003E2683 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0F7197265E6BD8003E2683 /* Preview Assets.xcassets */; };
+		CD0F71A1265E6E95003E2683 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CD0F71A0265E6E95003E2683 /* Alamofire */; };
+		CD0F71A3265E6F03003E2683 /* InstCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F71A2265E6F03003E2683 /* InstCore.swift */; };
+		CD0F71A5265E7573003E2683 /* picsum_item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F71A4265E7573003E2683 /* picsum_item.swift */; };
+		CD0F71A7265E9305003E2683 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F71A6265E9305003E2683 /* ImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,9 @@
 		CD0F7194265E6BD8003E2683 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD0F7197265E6BD8003E2683 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD0F7199265E6BD8003E2683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD0F71A2265E6F03003E2683 /* InstCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstCore.swift; sourceTree = "<group>"; };
+		CD0F71A4265E7573003E2683 /* picsum_item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = picsum_item.swift; sourceTree = "<group>"; };
+		CD0F71A6265E9305003E2683 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD0F71A1265E6E95003E2683 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +62,9 @@
 			children = (
 				CD0F7190265E6BD7003E2683 /* inst_cloneApp.swift */,
 				CD0F7192265E6BD8003E2683 /* ContentView.swift */,
+				CD0F71A6265E9305003E2683 /* ImageView.swift */,
+				CD0F71A2265E6F03003E2683 /* InstCore.swift */,
+				CD0F71A4265E7573003E2683 /* picsum_item.swift */,
 				CD0F7194265E6BD8003E2683 /* Assets.xcassets */,
 				CD0F7199265E6BD8003E2683 /* Info.plist */,
 				CD0F7196265E6BD8003E2683 /* Preview Content */,
@@ -85,6 +96,9 @@
 			dependencies = (
 			);
 			name = "inst-clone";
+			packageProductDependencies = (
+				CD0F71A0265E6E95003E2683 /* Alamofire */,
+			);
 			productName = "inst-clone";
 			productReference = CD0F718D265E6BD7003E2683 /* inst-clone.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +126,9 @@
 				Base,
 			);
 			mainGroup = CD0F7184265E6BD7003E2683;
+			packageReferences = (
+				CD0F719F265E6E95003E2683 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = CD0F718E265E6BD7003E2683 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD0F71A7265E9305003E2683 /* ImageView.swift in Sources */,
 				CD0F7193265E6BD8003E2683 /* ContentView.swift in Sources */,
+				CD0F71A3265E6F03003E2683 /* InstCore.swift in Sources */,
 				CD0F7191265E6BD7003E2683 /* inst_cloneApp.swift in Sources */,
+				CD0F71A5265E7573003E2683 /* picsum_item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +348,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CD0F719F265E6E95003E2683 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CD0F71A0265E6E95003E2683 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD0F719F265E6E95003E2683 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CD0F7185265E6BD7003E2683 /* Project object */;
 }
