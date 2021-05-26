@@ -9,8 +9,9 @@ import SwiftUI
 import Alamofire
 
 struct ImageView: View {
-    @State var item: PicsumItem
+    @EnvironmentObject var instcore: InstCore
     
+    @State var item: PicsumItem
     @State var image: Image? = nil
     
     var body: some View {
@@ -55,6 +56,13 @@ struct ImageView: View {
     }
     
     func loadImage() {
+        
+        print("LOADING IMG: \(item.id)")
+        
+        if item.id == instcore.idForUpdate {
+            instcore.loadNewImages()
+        }
+        
         guard let previewImage =  URL(string: "https://picsum.photos/id/\(item.id)/300") else {
             fatalError("item.id error")
         }

@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct inst_cloneApp: App {
+    @StateObject var instCore: InstCore
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(instCore)
         }
+    }
+    
+    init() {
+        let instCore = InstCore()
+        _instCore = StateObject(wrappedValue: instCore)
     }
 }

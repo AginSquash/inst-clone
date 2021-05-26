@@ -9,7 +9,7 @@ import SwiftUI
 import Alamofire
 
 struct ContentView: View {
-    @ObservedObject var instcore = InstCore()
+    @EnvironmentObject var instcore: InstCore
     
     @State var image: Image?
     
@@ -17,11 +17,13 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
-                ForEach(instcore.items, id: \.self) { item in
-                    ImageView(item: item)
+                LazyVStack {
+                    ForEach(instcore.items, id: \.self) { item in
+                        ImageView(item: item)
+                    }
+                    //.padding()
                 }
             }
-            .padding()
             .edgesIgnoringSafeArea(.bottom)
             .navigationBarTitle("Not-a-gram")
         }
