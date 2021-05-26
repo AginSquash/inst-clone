@@ -26,17 +26,15 @@ struct ImageView: View {
                     Text(item.author)
                     Spacer()
                 }
-                //.padding([.leading])
                 
                 if image != nil {
                     image!
                         .resizable()
-                        //.scaledToFill()
-                        //.frame(width: 350, height: 320, alignment: .center)
-                        //.clipShape(Rectangle(), style: FillStyle())
+                        .transition(.opacity)
                 } else {
                    Rectangle()
                     .foregroundColor(.gray)
+                    .transition(.opacity)
                 }
                 HStack {
                     Image(systemName: "suit.heart")
@@ -82,7 +80,9 @@ struct ImageView: View {
         print("updating")
         
         DispatchQueue.main.async {
-            self.image = Image(uiImage: uiimage)
+            withAnimation {
+                self.image = Image(uiImage: uiimage)
+            }
         }
         
     }
