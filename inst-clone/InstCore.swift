@@ -12,7 +12,6 @@ import UIKit
 
 class InstCore: ObservableObject {
     @Published var items: [PicsumItem] = []
-    @Published var photos: [picsum_photo] = []
     
     func load() {
         AF.request("https://picsum.photos/v2/list").responseDecodable(of: [PicsumItem].self) { responce in
