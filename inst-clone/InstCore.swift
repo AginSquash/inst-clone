@@ -17,7 +17,10 @@ class InstCore: ObservableObject {
     var idForUpdate: String = ""
     
     func load() {
-        AF.request("https://picsum.photos/v2/list").responseDecodable(of: [PicsumItem].self) { responce in
+        let cacher = ResponseCacher(behavior: .cache)
+        AF.request("https://picsum.photos/v2/list")
+            .cacheResponse(using: cacher)
+            .responseDecodable(of: [PicsumItem].self) { responce in
             switch responce.result {
             case .success(let items):
                 self.items = items
