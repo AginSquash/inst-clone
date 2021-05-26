@@ -15,12 +15,16 @@ struct ContentView: View {
     
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            ForEach(instcore.items, id: \.self) { item in
-                ImageView(item: item)
+        NavigationView {
+            ScrollView(.vertical, showsIndicators: false) {
+                ForEach(instcore.items, id: \.self) { item in
+                    ImageView(item: item)
+                }
             }
+            .padding()
+            .edgesIgnoringSafeArea(.bottom)
+            .navigationBarTitle("Not-a-gram")
         }
-        .padding()
         .onAppear(perform: instcore.load)
     }
     
