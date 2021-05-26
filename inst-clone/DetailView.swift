@@ -47,7 +47,9 @@ struct DetailView: View {
             } else {
                 ProgressView("Loading image")
             }
-        }.onAppear(perform: loadImage)
+        }
+        .navigationTitle(item.author)
+        .onAppear(perform: loadImage)
     }
     
     func loadImage() {
