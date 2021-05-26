@@ -19,18 +19,19 @@ struct ImageView: View {
             RoundedRectangle(cornerRadius: 25)
                 .foregroundColor(.white)
                 .shadow(radius: 10)
-            
-            VStack {
+            VStack(spacing: 10) {
                 HStack {
                     Image(systemName: "person.circle")
                         .font(.system(size: 30))
                     Text(item.author)
                     Spacer()
                 }
+                .foregroundColor(.black)
                 
                 if image != nil {
                     image!
                         .resizable()
+                        .scaledToFit()
                         .transition(.opacity)
                 } else {
                    Rectangle()
@@ -43,15 +44,15 @@ struct ImageView: View {
                     Image(systemName: "message")
                     Spacer()
                 }
-                .font(.system(size: 25))
-                .padding(.top, 5)
-                //.padding([.leading, .top])
+                .font(.system(size: 22))
+                .foregroundColor(.black)
             }
             .padding()
             
         }
-        .frame(width: 370, height: 400, alignment: .center)
-        .padding()
+        .frame(height: 460, alignment: .center)
+        .padding([.horizontal])
+        .padding(.top)
         .onAppear(perform: loadImage)
     }
     
@@ -63,7 +64,7 @@ struct ImageView: View {
             instcore.loadNewImages()
         }
         
-        guard let previewImage =  URL(string: "https://picsum.photos/id/\(item.id)/300") else {
+        guard let previewImage =  URL(string: "https://picsum.photos/id/\(item.id)/400") else {
             fatalError("item.id error")
         }
         print("previewImage: \(previewImage)")
@@ -97,7 +98,9 @@ struct ImageView: View {
 }
 
 struct ImageView_Previews: PreviewProvider {
+    static var instaCore = InstCore()
     static var previews: some View {
         ImageView(item: PicsumItem.getExample())
+            .environmentObject( instaCore )
     }
 }
