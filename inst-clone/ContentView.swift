@@ -13,20 +13,23 @@ struct ContentView: View {
     
     @State var image: Image?
     
-    
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVStack {
                     ForEach(instcore.items, id: \.self) { item in
-                        ImageView(item: item)
+                        NavigationLink(
+                            destination: DetailView(item: item),
+                            label: {
+                                ImageView(item: item)
+                            })
                     }
-                    //.padding()
                 }
             }
             .edgesIgnoringSafeArea(.bottom)
             .navigationBarTitle("Not-a-gram")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .onAppear(perform: instcore.load)
     }
     
@@ -40,7 +43,9 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    static var instaCore = InstCore()
     static var previews: some View {
         ContentView()
+            .environmentObject( instaCore )
     }
 }

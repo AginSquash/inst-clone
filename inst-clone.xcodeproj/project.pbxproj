@@ -15,6 +15,7 @@
 		CD0F71A3265E6F03003E2683 /* InstCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F71A2265E6F03003E2683 /* InstCore.swift */; };
 		CD0F71A5265E7573003E2683 /* PicsumItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F71A4265E7573003E2683 /* PicsumItem.swift */; };
 		CD0F71A7265E9305003E2683 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F71A6265E9305003E2683 /* ImageView.swift */; };
+		CD0F71A9265EF368003E2683 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F71A8265EF368003E2683 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		CD0F71A2265E6F03003E2683 /* InstCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstCore.swift; sourceTree = "<group>"; };
 		CD0F71A4265E7573003E2683 /* PicsumItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsumItem.swift; sourceTree = "<group>"; };
 		CD0F71A6265E9305003E2683 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		CD0F71A8265EF368003E2683 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				CD0F7190265E6BD7003E2683 /* inst_cloneApp.swift */,
 				CD0F7192265E6BD8003E2683 /* ContentView.swift */,
+				CD0F71A8265EF368003E2683 /* DetailView.swift */,
 				CD0F71A6265E9305003E2683 /* ImageView.swift */,
 				CD0F71A2265E6F03003E2683 /* InstCore.swift */,
 				CD0F71A4265E7573003E2683 /* PicsumItem.swift */,
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD0F71A7265E9305003E2683 /* ImageView.swift in Sources */,
+				CD0F71A9265EF368003E2683 /* DetailView.swift in Sources */,
 				CD0F7193265E6BD8003E2683 /* ContentView.swift in Sources */,
 				CD0F71A3265E6F03003E2683 /* InstCore.swift in Sources */,
 				CD0F7191265E6BD7003E2683 /* inst_cloneApp.swift in Sources */,
