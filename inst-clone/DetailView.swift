@@ -14,7 +14,6 @@ struct DetailView: View {
     @State var image: Image? = nil
     
     @State private var scale: CGFloat = 1.0
-    @State private var lastScale: CGFloat = 1.0
     @State private var imageTranslation = CGSize.zero
     @State private var lastImageTranslation = CGSize.zero
     
@@ -37,14 +36,7 @@ struct DetailView: View {
                         )
                         .gesture(MagnificationGesture()
                             .onChanged { value in
-                                print(value.magnitude)
-                                print("abs: \(abs(scale-value.magnitude))")
-                                if abs(scale-value.magnitude) < 0.4 {
-                                    self.scale = value.magnitude
-                                }
-                            }
-                            .onEnded { value in
-                                self.lastScale = value.magnitude
+                                self.scale = value.magnitude
                             }
                         )
                         .onTapGesture(count: 2, perform: {
