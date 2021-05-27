@@ -49,6 +49,10 @@ struct DetailView: View {
             }
         }
         .navigationTitle(item.author)
+        .navigationBarItems(trailing: Button(action: shareButton, label: {
+            Image(systemName: "square.and.arrow.up")
+                .font(.system(size: 22))
+        }))
         .onAppear(perform: loadImage)
     }
     
@@ -70,6 +74,12 @@ struct DetailView: View {
                 print(error)
             }
         }
+    }
+    
+    func shareButton() {
+        let vc = UIActivityViewController(activityItems: [item.url], applicationActivities: nil)
+        
+        UIApplication.shared.windows.first?.rootViewController?.present(vc, animated: true, completion: nil)
     }
 }
 

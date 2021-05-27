@@ -14,6 +14,7 @@ struct PicsumItem: Codable, Hashable, Identifiable {
     let author: String
     let width: Int
     let height: Int
+    let url: URL
     let download_url: URL
     
     enum CodingKeys: CodingKey {
@@ -21,10 +22,11 @@ struct PicsumItem: Codable, Hashable, Identifiable {
         case author
         case width
         case height
+        case url
         case download_url
     }
     
     static func getExample() -> PicsumItem {
-        return PicsumItem(id: "0", author: "Alejandro Escamilla", width: 5616, height:3744, download_url: URL(string: "https://picsum.photos/id/0/5616/3744")!)
+        return PicsumItem(id: "0", author: "Alejandro Escamilla", width: 5616, height:3744, url: URL(string: "https://picsum.photos/id/0/info")!, download_url: URL(string: "https://picsum.photos/id/0/5616/3744")!)
     }
 }
