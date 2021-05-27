@@ -9,6 +9,15 @@
           "revision": "f96b619bcb2383b43d898402283924b80e2c4bae",
           "version": "5.4.3"
         }
+      },
+      {
+        "package": "AlamofireURLCache5",
+        "repositoryURL": "https://github.com/HarshitDaftary/AlamofireURLCache.git",
+        "state": {
+          "branch": null,
+          "revision": "05212f5f722f777fcefbca2b7868725a829042ad",
+          "version": "0.5.1"
+        }
       }
     ]
   },

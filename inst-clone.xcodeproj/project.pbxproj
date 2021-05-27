@@ -16,6 +16,7 @@
 		CD0F71A5265E7573003E2683 /* PicsumItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F71A4265E7573003E2683 /* PicsumItem.swift */; };
 		CD0F71A7265E9305003E2683 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F71A6265E9305003E2683 /* ImageView.swift */; };
 		CD0F71A9265EF368003E2683 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F71A8265EF368003E2683 /* DetailView.swift */; };
+		CD6A18FD265FA0DD00D6C056 /* AlamofireURLCache5 in Frameworks */ = {isa = PBXBuildFile; productRef = CD6A18FC265FA0DD00D6C056 /* AlamofireURLCache5 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD6A18FD265FA0DD00D6C056 /* AlamofireURLCache5 in Frameworks */,
 				CD0F71A1265E6E95003E2683 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +103,7 @@
 			name = "inst-clone";
 			packageProductDependencies = (
 				CD0F71A0265E6E95003E2683 /* Alamofire */,
+				CD6A18FC265FA0DD00D6C056 /* AlamofireURLCache5 */,
 			);
 			productName = "inst-clone";
 			productReference = CD0F718D265E6BD7003E2683 /* inst-clone.app */;
@@ -131,6 +134,7 @@
 			mainGroup = CD0F7184265E6BD7003E2683;
 			packageReferences = (
 				CD0F719F265E6E95003E2683 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CD6A18FB265FA0DD00D6C056 /* XCRemoteSwiftPackageReference "AlamofireURLCache" */,
 			);
 			productRefGroup = CD0F718E265E6BD7003E2683 /* Products */;
 			projectDirPath = "";
@@ -362,6 +366,14 @@
 				minimumVersion = 5.4.3;
 			};
 		};
+		CD6A18FB265FA0DD00D6C056 /* XCRemoteSwiftPackageReference "AlamofireURLCache" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HarshitDaftary/AlamofireURLCache.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -369,6 +381,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CD0F719F265E6E95003E2683 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		CD6A18FC265FA0DD00D6C056 /* AlamofireURLCache5 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD6A18FB265FA0DD00D6C056 /* XCRemoteSwiftPackageReference "AlamofireURLCache" */;
+			productName = AlamofireURLCache5;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
